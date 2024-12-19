@@ -1,4 +1,21 @@
 {
-  "extends": ["next/core-web-vitals", "next/typescript"]
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+    "next/core-web-vitals", "next/typescript",
+    // enable all recommended rules to warn
+//    "plugin:readable-tailwind/warning",
+    // enable all recommended rules to error
+    "plugin:readable-tailwind/error"
+  ],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": "latest"
+  },
+  "plugins": ["readable-tailwind"],
+  "rules": {
+    // or configure rules individually
+    "readable-tailwind/multiline": ["warn", { "printWidth": 80, "group": "newLine" }]
+  }
 }
-gaa

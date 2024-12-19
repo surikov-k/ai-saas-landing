@@ -27,7 +27,16 @@ export const loginItems = [
 ];
 
 export const Header = () => {
-  return <header>header section</header>;
+  return (
+    <header
+      className={`
+        whitespace-nowrap px-4 py-4 text-zinc-400
+        hover:px-4
+      `}
+    >
+      header section
+    </header>
+  );
 };
 
 export default Header;
