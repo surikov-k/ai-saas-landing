@@ -10,7 +10,7 @@ export const Hero = () => {
   return (
     <section>
       <div className="container">
-        <div className="border-l border-r border-[var(--color-border)]">
+        <div className="overflow-hidden border-l border-r border-[var(--color-border)]">
           <div
             className={`
               container relative isolate py-24

@@ -1,6 +1,5 @@
 import { cva } from "class-variance-authority";
 import { HTMLAttributes } from "react";
-import { twMerge } from "tailwind-merge";
 
 const classes = cva(`rounded-full bg-gradient-to-b to-gray-950`, {
   variants: {
