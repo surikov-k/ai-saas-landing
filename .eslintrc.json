@@ -16,6 +16,6 @@
   "plugins": ["readable-tailwind"],
   "rules": {
     // or configure rules individually
-    "readable-tailwind/multiline": ["warn", { "printWidth": 80, "group": "newLine" }]
+    "readable-tailwind/multiline": ["warn", { "printWidth": 100, "group": "newLine" }]
   }
 }
