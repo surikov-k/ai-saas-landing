@@ -2,6 +2,8 @@ import robotImg from "@/assets/images/robot.jpg";
 import Button from "@/components/Button";
 import Orbit from "@/components/Orbit";
 import Planet from "@/components/Planet";
+import SectionBorder from "@/components/SectionBorder";
+import SectionContent from "@/components/SectionContent";
 import Image from "next/image";
 import underlineImage from "@/assets/images/underline.svg?url";
 import Loader from "@/assets/images/loader.svg";
@@ -10,12 +12,11 @@ export const Hero = () => {
   return (
     <section>
       <div className="container">
-        <div className="overflow-hidden border-l border-r border-[var(--color-border)]">
-          <div
+        <SectionBorder>
+          <SectionContent
             className={`
-              container relative isolate py-24
-              lg:py-48
-              md:py-36
+              relative isolate
+              [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_90%,transparent)]
             `}
           >
             <div
@@ -25,12 +26,7 @@ export const Hero = () => {
                 [mask-image:radial-gradient(circle_farthest-side,black,transparent)]
               `}
             ></div>
-            <div
-              className={`
-                absolute inset-0 -z-10 overflow-hidden
-                [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_90%,transparent)]
-              `}
-            >
+            <div className={`absolute inset-0 -z-10`}>
               <div className="absolute-center">
                 <Orbit className="size-[350px]" />
               </div>
@@ -168,8 +164,8 @@ export const Hero = () => {
                 </div>
               </div>
             </div>
-          </div>
-        </div>
+          </SectionContent>
+        </SectionBorder>
       </div>
     </section>
   );
