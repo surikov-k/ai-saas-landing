@@ -42,7 +42,7 @@ export const Header = () => {
   const [isMobileNavOpen, setMobileNavOpen] = useState(false);
   return (
     <>
-      <header className="relative z-40 border-b border-gray-200/20">
+      <header className="relative z-40 border-b border-[var(--color-border)]">
         <div className="container">
           <div
             className={`
@@ -61,9 +61,7 @@ export const Header = () => {
                   maskSize: "contain",
                 }}
               ></div>
-              <div className="text-xl font-bold leading-none tracking-widest">
-                sphereal.ai
-              </div>
+              <div className="text-2xl font-bold">sphereal.ai</div>
             </div>
             <div
               className={`
@@ -77,7 +75,7 @@ export const Header = () => {
                     key={href}
                     href={href}
                     className={`
-                      relative inline-flex h-full items-center px-10 text-[10px]
+                      relative inline-flex h-full items-center px-10 text-xs
                       font-bold uppercase tracking-widest text-gray-400
                       before:absolute before:bottom-0 before:right-0 before:h-2
                       before:w-px before:bg-gray-200/20

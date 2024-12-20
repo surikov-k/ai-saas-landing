@@ -2,7 +2,7 @@ import { cva } from "class-variance-authority";
 import { HTMLAttributes } from "react";
 
 const classes = cva(
-  `h-10 rounded-lg px-6 text-[10px] font-bold uppercase tracking-widest`,
+  `h-10 rounded-lg px-6 text-xs font-bold uppercase tracking-widest`,
   {
     variants: {
       block: {
