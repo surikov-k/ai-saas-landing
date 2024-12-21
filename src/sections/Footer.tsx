@@ -1,3 +1,5 @@
+"use client";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import {
@@ -21,7 +23,7 @@ export const navItems = [
   },
   {
     name: "Login",
-    href: "#login",
+    href: "#",
   },
 ];
 
@@ -65,6 +67,13 @@ export const Footer = () => {
                 key={href}
                 href={href}
                 className="text-xs font-bold uppercase tracking-widest text-gray-400"
+                onClick={(event) => {
+                  event.preventDefault();
+                  const element = document.querySelector(href);
+                  if (element) {
+                    element.scrollIntoView({ behavior: "smooth" });
+                  }
+                }}
               >
                 {name}
               </a>

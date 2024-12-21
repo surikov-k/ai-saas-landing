@@ -48,7 +48,7 @@ export const Testimonials = () => {
   // const [];
   return (
     <section>
-      <div className="container">
+      <div className="container" id="testimonials">
         <SectionBorder borderTop>
           <SectionContent>
             <div

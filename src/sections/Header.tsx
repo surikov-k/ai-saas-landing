@@ -73,6 +73,13 @@ export const Header = () => {
                       last:after:absolute last:after:bottom-0 last:after:left-0 last:after:h-2
                       last:after:w-px last:after:bg-gray-200/20
                     `}
+                    onClick={(event) => {
+                      event.preventDefault();
+                      const section = document.querySelector(href);
+                      if (section) {
+                        section.scrollIntoView({ behavior: "smooth" });
+                      }
+                    }}
                   >
                     {name}
                   </a>
@@ -161,6 +168,14 @@ export const Header = () => {
                   key={href}
                   href={href}
                   className={`h-10 text-xs font-bold uppercase tracking-widest text-gray-400`}
+                  onClick={(event) => {
+                    event.preventDefault();
+                    const section = document.querySelector(href);
+                    if (section) {
+                      setMobileNavOpen(false);
+                      section.scrollIntoView({ behavior: "smooth" });
+                    }
+                  }}
                 >
                   {name}
                 </a>
